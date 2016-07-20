@@ -32,6 +32,9 @@ namespace com.xamarin.sample.datepicker
             DateTime currently = DateTime.Now;
             DatePickerDialog dialog = new DatePickerDialog(Activity, this, currently.Year, currently.Month,
                                                            currently.Day);
+                                                           
+           dialog.DatePicker.MinDate = Java.Lang.JavaSystem.CurrentTimeMillis();
+           
             return dialog;
         }
     }
